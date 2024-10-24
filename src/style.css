@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    margin: 0;
+}
+
+.navbar {
+    background-color: #232f3e;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.product-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;
+    padding: 1rem 2rem;
+}
+
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    height: 450px; 
+    padding: 1rem; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #007185;
+}
+
+.product-card p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #B12704;
+}
+
+.button-container {
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: auto; 
+}
+
+button {
+    background-color: #FFA41C;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    flex: 1; 
+    margin: 0 5px; 
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff8c00;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin: 1rem;
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .product-list-container {
+        padding: 0.5rem;
+        gap: 15px; 
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .product-card {
+        height: 450px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .product-list-container {
+        padding: 1rem 3rem; 
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .product-list-container {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+    }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .product-list-container {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+}
